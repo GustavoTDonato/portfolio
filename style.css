@@ -288,6 +288,7 @@ section.projetos .flex{
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
+
 /* Estilo rodapé */
 footer{
     background-color: #2c2c2c;
@@ -334,3 +335,158 @@ footer .line-footer p a{
     color: #ffffff;
     text-decoration: none;
 }
+
+/* Início Menu Mobile */
+.menu-toggle {
+    display: none;
+}
+
+/* Ícone do menu */
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    color: #C8A45B;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+/* Menu lateral oculto por padrão */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background-color: #2c2c2c;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-mobile ul li {
+    margin: 20px 0;
+}
+
+.menu-mobile ul li a {
+    color: #C8A45B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Quando ativado, mostra o menu */
+.menu-toggle:checked ~ .menu-mobile {
+    left: 0;
+}
+
+/* Responsividade para celular */
+@media screen and (max-width: 1020px){
+    .flex{
+        flex-direction: column;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    
+    header {
+        padding: 20px 5%;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    section.topo-do-site {
+        padding: 60px 5%;
+        height: auto;
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 24px;
+    }
+
+    .topo-do-site p {
+        font-size: 16px;
+    }
+
+    .img-topo-site img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    section.especialidades .flex,
+    section.sobre .flex,
+    section.projetos .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .especialidades .especialidades-box {
+        padding: 20px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 24px;
+    }
+
+    .sobre .txt-sobre p {
+        font-size: 16px;
+    }
+
+    .img-sobre img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    footer .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .btn-social button {
+        margin: 5px;
+    }
+
+     .menu-icon {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-desktop,
+    .btn-contato {
+        display: none !important;
+    }
+
+    body {
+        padding-left: 0;
+    }
+}
+
+
+    
